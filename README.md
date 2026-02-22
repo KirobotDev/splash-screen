@@ -1,3 +1,3 @@
 - Free Splash Screen
 
-<div>Open Source Loving</div>
+- Open Source Loving
