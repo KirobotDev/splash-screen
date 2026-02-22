@@ -24,7 +24,7 @@
 
               <path class="stroke leg right" d="M50 10 L80 110" />
 
-              <path class="stroke cross" d="M26 54 L74 54" />
+              <path class="stroke crossbar" d="M25 54 L75 54" />
             </svg>
 
             <div class="logo-rest">nimeFlix</div>
@@ -92,9 +92,9 @@ onMounted(() => {
 }
 
 .crossbar {
-  stroke-width: 14;
-  stroke-dasharray: 40;
-  stroke-dashoffset: 40;
+  stroke-width: 16;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
 }
 
 .animate .left {
@@ -106,10 +106,19 @@ onMounted(() => {
 }
 
 .animate .crossbar {
-  animation: draw 0.4s 1.4s ease-out forwards;
+  animation: draw-crossbar 0.8s 1.4s ease-out forwards;
 }
 
 @keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-crossbar {
+  from {
+    stroke-dashoffset: 100;
+  }
   to {
     stroke-dashoffset: 0;
   }
